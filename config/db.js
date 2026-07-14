@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
-const dns = require("dns")
-dns.setServers(["8.8.8.8","8.8.4.4"])
+
 const connectDB = async () => {
   try {
     
-    await mongoose.connect('mongodb+srv://sunnybathu24:<Sunny@12>@cluster0.ta9j3yt.mongodb.net/sunny');
+    await mongoose.connect('mongodb://localhost:27017/workshop_db');
     
     console.log('MongoDB connected successfully!');
   } catch (err) {
